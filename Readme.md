@@ -15,11 +15,12 @@ select partition #               //select the one partition named system reserve
 delete partition override       //deletes the partition
 ```
 
-```
+
 **Now convert using mbr2gpt**
 
 REPLACE # with the correct disk number!!
 
+```
 mbr2gpt /validate /disk:# /allowfullos
 mbr2gpt /convert /disk:# /allowfullos
 ```
