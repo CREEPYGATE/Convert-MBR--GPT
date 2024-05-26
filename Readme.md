@@ -13,3 +13,26 @@ select partition #               //select the one partition named system reserve
 delete partition override       //deletes the partition
 ```
 
+```
+**Now convert using mbr2gpt**
+
+REPLACE # with the correct disk number!!
+
+mbr2gpt /validate /disk:# /allowfullos
+mbr2gpt /convert /disk:# /allowfullos
+```
+
+Reboot and change bios settings to uefi    (secureboot or disable csm)
+
+**NOW TO RECOVER THE WINDOWS RECOVERY!!**
+
+go to disk management, see if there is some unallocated space left. if not create new one (SHRINK) 1024MB
+go to diskpart and select the newly created partition, and use comman 
+``
+set id=de94bba4-06d1-4d40-a16a-bfd50179d6ac
+``
+
+now launch admin cmd and re-enable recovery using command reagentc /enable 
+
+
+**THAT's IT**
