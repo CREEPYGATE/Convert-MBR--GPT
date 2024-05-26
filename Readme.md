@@ -37,5 +37,9 @@ set id=de94bba4-06d1-4d40-a16a-bfd50179d6ac
 
 now launch admin cmd and re-enable recovery using command reagentc /enable 
 
+check if enabled 
+``
+reagentc /info
+``
 
-**THAT's IT**
+**THAT's IT** 
